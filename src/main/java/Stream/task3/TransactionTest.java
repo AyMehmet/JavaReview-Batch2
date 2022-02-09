@@ -1,4 +1,4 @@
-package stream.task3;
+package Stream.task3;
 
 import java.util.Optional;
 

@@ -1,4 +1,4 @@
-package stream.task2;
+package Stream.task2;
 
 import lombok.*;
 

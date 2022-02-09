@@ -15,6 +15,9 @@ public class Demo {
         Calculate s2 = Calculator::findSum;
         s2.calculate(100,35);
 
+        Calculate s3=Calculator::findSum;
+        s3.calculate(10,20);
+
         //Reference to instance method
         Calculate m1 = (x,y) -> new Calculator().findMultiply(x,y);
         m1.calculate(5,6);
@@ -37,6 +40,9 @@ public class Demo {
 
         Consumer<Integer> display2 = System.out::println;
         display2.accept(50);
+
+        BiFunction<MyClass,Integer,Double> sum=MyClass::method;
+        sum.apply(,10)
 
 
 

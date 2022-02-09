@@ -1,7 +1,4 @@
-package stream.task;
-
-import stream.task.Dish;
-import stream.task.DishData;
+package Stream.task;
 
 import static java.util.Comparator.comparing;
 

@@ -1,4 +1,4 @@
-package stream.task;
+package Stream.task;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,36 +1,33 @@
-package stream;
+package Stream;
 
 import java.util.List;
 
-public class EmployyeTest {
-
+public class EmployeeTest {
     public static void main(String[] args) {
 
 
-        //Print all emails- One employee has one email - One to One
-        EmployeeData.readlAll()
+        //Print all emails - One employee has one email - One to One
+        System.out.println("*********************");
+        EmployeeData.readAll()
                 .map(Employee::getEmpEmail)
                 .forEach(System.out::println);
 
         //Print all phone numbers
-        EmployeeData.readlAll()
+        System.out.println("*********************");
+        EmployeeData.readAll()
                 .map(Employee::getEmpPhoneNumbers)
                 .forEach(System.out::println);
 
         System.out.println("*********************");
-
-        EmployeeData.readlAll()
+        EmployeeData.readAll()
                 .flatMap(employee -> employee.getEmpPhoneNumbers().stream())
                 .forEach(System.out::println);
 
         System.out.println("*********************");
-
-        EmployeeData.readlAll()
+        EmployeeData.readAll()
                 .map(Employee::getEmpPhoneNumbers)
                 .flatMap(List::stream)
                 .forEach(System.out::println);
-
-
 
     }
 }

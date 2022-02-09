@@ -1,7 +1,7 @@
-package stream;
+package Stream;
 
-import stream.task.Dish;
-import stream.task.DishData;
+import Stream.task.Dish;
+import Stream.task.DishData;
 
 import java.util.Optional;
 

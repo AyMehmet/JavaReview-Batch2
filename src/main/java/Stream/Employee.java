@@ -1,16 +1,13 @@
-package stream;
+package Stream;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-@AllArgsConstructor
-@NoArgsConstructor
 @Data
+@AllArgsConstructor
 public class Employee {
-
     private int empId;
     private String empName;
     private String empEmail;

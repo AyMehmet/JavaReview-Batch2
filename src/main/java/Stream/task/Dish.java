@@ -1,4 +1,4 @@
-package stream.task;
+package Stream.task;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

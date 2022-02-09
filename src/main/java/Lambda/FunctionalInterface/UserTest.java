@@ -8,31 +8,35 @@ public class UserTest {
 
     public static void main(String[] args) {
 
-        List<User> userList=new ArrayList<>();
-        userList.add(new User("ali","aaa",10 ));
-        userList.add(new User("eli","asfas",14));
+        List<User> users = new ArrayList<>();
+        users.add(User.builder().firstName("Mike").lastName("Smith").age(35).build());
+        users.add(User.builder().firstName("Tom").lastName("Hanks").age(55).build());
+        users.add(User.builder().firstName("Ammy").lastName("Evan").age(15).build());
+        users.add(User.builder().firstName("Emma").lastName("Pellard").age(25).build());
 
-        List<User> allUser=showUser(userList,user -> userList.contains(user));
-        System.out.println(allUser);
-        List<User> someUser=showUser(userList,user -> user.getName().startsWith("a"));
-        System.out.println(someUser);
-
-
-        }
+        //Print all elements in the list
+//        printName(users, p -> true);
+        printName(users,user -> true);
 
 
-    private static List<User> showUser(List<User> userList, Predicate<User> p) {
+        //Print all users that last name starts with E
+        printName(users, user -> user.getLastName().startsWith("E"));
+    }
 
-        List<User> result = new ArrayList<>();
-
-        for(User user :userList){
+    private static void printName(List<User> users, Predicate<User> p){
+        for(User user : users){
             if(p.test(user)){
-                result.add(user);
+                System.out.println(user.toString());
             }
         }
 
-        return result;
-    }
+        for (User a:users) {
+            if(p.test(a)){
+                a.setFirstName("ali");
+               System.out.println(a.getFirstName());
+            }
 
+        }
+    }
 
 }
